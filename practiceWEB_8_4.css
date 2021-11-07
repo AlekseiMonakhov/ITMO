@@ -1,0 +1,47 @@
+    body {
+        background-color: #cecece;
+        padding: 0;
+    }
+    div {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        left: 10px;
+        transition: left 1s; /*Время на выполнение*/
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .container:hover div {
+        left: 500px; /*Смещение на 500px*/
+    }
+    .ease {
+        background-color: blue;
+        transition-timing-function: ease; /*Скорость перехода*/
+    }
+    .linear {
+        background-color: lime;
+        transition-timing-function: linear; /*Скорость перехода*/
+        transition-delay: 1s; /*Задержка выполнения*/
+    }
+    .ease-in {
+        background-color: mediumseagreen;
+        transition-timing-function: ease-in; /*Скорость перехода*/
+        transition-delay: 2s; /*Задержка выполнения*/
+    }
+    .ease-out {
+        background-color: orangered;
+        transition-timing-function: ease-out; /*Скорость перехода*/
+        transition-delay: 3s; /*Задержка выполнения*/
+    }
+    .ease-in-out {
+        background-color: darkviolet;
+        transition-timing-function: ease-in-out; /*Скорость перехода*/
+        transition-delay: 4s; /*Задержка выполнения*/
+    }
+    .cubic-bezier {
+        background-color: darkviolet;
+        transition-timing-function: cubicbezier(.23,.33,.05,1.18); /*Скорость перехода*/
+        transition-delay: 5s; /*Задержка выполнения*/
+    }

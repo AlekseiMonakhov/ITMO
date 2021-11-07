@@ -1,0 +1,52 @@
+body {
+    background-color: #cecece;
+    padding: 32px;
+    }
+
+button {
+    margin: 25px 15px;
+    border: none;
+    border-radius: 5px; /*Скругленные углы*/
+    border: 1px solid lime;
+    padding: 15px 35px;
+    }
+button:hover {
+    outline: 1px solid white;
+    outline-offset: -2px; /*Сдвиг нескругленной рамки внутрь на 2px*/
+    cursor: pointer; /*Изменение курсора*/
+    }
+.button1 {
+    background-image: linear-gradient(#76B9CC, #97cc76); /*Линейный градиент вниз из двух цветов*/
+    }
+.button2 {
+    background-image: linear-gradient(#76B9CC, #CC208A,
+    #97cc76); /*Линейный градиент вниз из трех цветов*/
+    }
+.button3 {
+    background-image: linear-gradient(#76B9CC, #CC208A,
+    #97cc76, #B34EE9); /*Линейный градиент вниз из четырех цветов*/
+    }
+.button4 {
+    background-image: linear-gradient(blue 5%, lime 30%,
+    #97cc76 80%, #B34EE9 90%); /*Линейный градиент вниз из четырех цветов с указанием размера в процентах*/
+    }
+.button5 {
+    background-image: linear-gradient(blue 5px, lime 15px,
+    white 30px, black 50px); /*Линейный градиент вниз из четырех цветов с указанием размера в пикселях*/
+    }
+.button6 {
+    background-image: linear-gradient(25deg, blue, lime); /*Линейный градиент под углом 25 градусов*/
+    }
+.button7 {
+    background-image: radial-gradient(red 0%, yellow 30%); /*Градиент по радиусу с неравномерным распределением*/
+    }
+.button8 {
+    background-image: radial-gradient(at top right, red, yellow); /*Градиент по радиусу с центром в верхнем правом углу*/
+    }
+.button9 {
+    background-image: radial-gradient(farthest-corner at 25% 50%, #f35 0%, #43e 100%); /*Градиент по радиусу и сдвигом по процентам неравномерным распределением*/
+    }
+.button10 {
+    background-image: radial-gradient(15px 15px at 85% 25%,
+    #f35 0%, #43e 100%); /*Градиент по радиусу с неравномерным распределением с указанием радиуса круга в пикселях и расположением в процентах*/
+    }
