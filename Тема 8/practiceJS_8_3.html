@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 8.3</title>
+    <script>
+    {
+    "use strict";
+        function buildOptions(objData, root) {
+            for (key in objData) {
+                let option = document.createElement('option');
+                option.value = objData[key].value;
+                option.innerText = objData[key].name;
+                root.appendChild(option);
+            }
+        }
+
+        function ResetOptionList(ElementValue) {
+            let cars = document.forms.cars;
+            let listCars = {
+                moto: {
+                    0 : {
+                        name: "Classic",
+                        value: 1
+                    },
+                    1 : {
+                        name: "Police Cruiser",
+                        value: 2
+                    },
+                    2 : {
+                        name: "Harley Davidson",
+                        value: 3
+                    },
+                },
+                cars : {
+                    0 : {
+                        name: "Ford",
+                        value: 1
+                    },
+                    1 : {
+                        name: "Chevy",
+                        value: 2
+                    }
+                } 
+            }
+            if(ElementValue == 1) {
+                
+                cars.OptionList.innerHTML = "";
+                buildOptions(listCars.moto, cars.OptionList);
+            }
+            if(ElementValue ==2) {
+                
+                cars.OptionList.innerHTML = "";   
+                buildOptions(listCars.cars, cars.OptionList);
+                
+            }
+        }
+    }
+    </script>
+    <style>
+        .typeOfVehicles label {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form name="cars" action="http://www.jimkeogh.com" method="post">
+        <select name="OptionList" size="5">
+            <option value=1>Classic</option>
+            <option value=2>Police Cruiser</option>
+            <option value=3>Harley Davidson</option>
+        </select><br>
+        
+        <div class="typeOfVehicles">
+            <label><input type="radio" name="vehicles" checked="true" value=1 onclick="ResetOptionList(this.value);">
+            Motorcycles</label>
+            <label><input type="radio" name="vehicles" value=2 onclick="ResetOptionList(this.value);">Cars</label>
+        </div>
+        <input name="Submit" value="Submit" type="submit"/>
+        <input name="Reset" value="Reset" type="reset"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 8.1</title>
+    <script>
+        {
+            "use strict";
+            function validateEmail(email) {
+                let Location = email.indexOf('@');
+                let domain = email.substring(Location+1, email.length);
+                let listDomain = ['mail.ru', 'gmail.com', 'yandex.ru', 'mail.kz'];
+                let chekDomain = false;
+                listDomain.forEach(item => {
+                    if (item == domain) { chekDomain = true; };
+                });
+                if (Location > -1 && chekDomain != false) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            function checkInputEmail(EmailAddress) {
+                let checkMail = validateEmail(EmailAddress);
+                if (checkMail == false) {
+                    alert('Введите Email! Формат: имя_ящика@платформа');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="http://www.ya.ru" method="post">
+        <label>Имя: <br><input type="text" name="Fname"></label><br>
+        <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+        <label>Email: <br><input type="text" name="Email" onblur="checkInputEmail(this.value)"></label><br>
+        <input name="Submit" value="Submit" type="submit"/>
+        <input name="Reset" value="Reset" type="reset"/>
+    </form>
+</body>
+</html>
